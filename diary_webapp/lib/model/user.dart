@@ -9,9 +9,10 @@ class MUser {
 
   MUser({this.id, this.uid, this.displayName, this.profession, this.avatarUrl});
 
-  factory MUser.fromDocument(QueryDocumentSnapshot data) {
+  factory MUser.fromDocument(DocumentSnapshot data) {
     return MUser(
         id: data.id,
+  
         uid: data.get('uid'),
         displayName: data.get('display_name'),
         profession: data.get('profession'),
